@@ -1,0 +1,35 @@
+.text,
+.title {
+  font-size: inherit;
+  line-height: 1.7;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: calc(2rem - 12px);
+}
+.standard {
+  color: var(--white);
+}
+.inherit {
+  color: inherit;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.soft {
+  color: gray;
+}

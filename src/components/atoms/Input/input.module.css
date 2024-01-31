@@ -1,0 +1,53 @@
+.primary.container,
+.secondary.container {
+  position: relative;
+}
+.primary .icon,
+.secondary .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.primary .icon + .input,
+.secondary .icon + .input {
+  padding: 8px 16px 8px 48px;
+}
+.primary .icon {
+  color: var(--blue);
+}
+.primary .input {
+  border: 1px solid var(--light-gray);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--gray);
+  background-color: transparent;
+  font-size: 0.77rem;
+}
+
+.primary .input:focus {
+  outline: none;
+}
+
+.primary .input::placeholder {
+  color: var(--gray);
+  font-size: 0.77rem;
+}
+
+.secondary .input {
+  border: 1px solid transparent;
+  padding: 20px 16px;
+  border-radius: 8px;
+  background-color: gainsboro;
+  font-size: 1rem;
+}
+.secondary .input:focus {
+  outline: none;
+}
+.secondary .icon {
+  color: gray;
+}
+.secondary .input::placeholder {
+  color: gray;
+  font-weight: bold;
+}
