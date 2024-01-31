@@ -28,7 +28,7 @@
 html,
 body {
   font-size: 18px;
-  font-family: "poppins", sans-serif;
+  font-family: "poppins", sans-serif !important;
 }
 :root {
   --white: #c4c4c4;
