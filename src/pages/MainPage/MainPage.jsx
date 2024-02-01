@@ -42,6 +42,7 @@ const MainPage = () => {
               value={input.budget}
               min={10}
               max={10000}
+              step={10}
             />
           </div>
         </main>

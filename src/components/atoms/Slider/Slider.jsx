@@ -6,7 +6,7 @@ import {
   SliderThumb,
 } from "@chakra-ui/slider";
 
-const Slider = ({ id, onChange, value = 30, min = 0, max = 100 }) => {
+const Slider = ({ id, onChange, value = 30, min = 0, max = 100, step = 1 }) => {
   const handleChange = (value) => {
     onChange(id, value);
   };
@@ -17,6 +17,7 @@ const Slider = ({ id, onChange, value = 30, min = 0, max = 100 }) => {
       onChange={handleChange}
       min={min}
       max={max}
+      step={step}
     >
       <SliderTrack h={"16px"} borderRadius={"8px"} background={"var(--black)"}>
         <SliderFilledTrack background={"var(--white)"} />
