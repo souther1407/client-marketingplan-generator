@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Text from "../../components/atoms/Text/Text";
 import Input from "../../components/atoms/Input/Input";
 import styles from "./mainPage.module.css";
 import Slider from "../../components/atoms/Slider/Slider";
 const MainPage = () => {
+  const [input, setInput] = useState({
+    idea: "",
+    budget: 5000,
+  });
+
+  const handleChange = (id, value) => {
+    setInput((prev) => ({ ...prev, [id]: value }));
+  };
   return (
     <div className={styles.mainPage}>
+      <Text type="title">Paddawan</Text>
       <div className={styles.container}>
         <main>
           <div>
@@ -18,11 +27,23 @@ const MainPage = () => {
           </div>
           <Input
             id={"idea"}
-            onChange={() => {}}
+            onChange={handleChange}
             onError={() => {}}
             placeholder="Type your product/service here."
           />
-          <Slider />
+          <div className={styles.budgetSlider}>
+            <section>
+              <Text>Budget</Text>
+              <Text>${input.budget}</Text>
+            </section>
+            <Slider
+              id="budget"
+              onChange={handleChange}
+              value={input.budget}
+              min={10}
+              max={10000}
+            />
+          </div>
         </main>
         <footer>
           <Text color="inherit">Create marketing plan</Text>

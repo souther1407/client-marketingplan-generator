@@ -6,9 +6,18 @@ import {
   SliderThumb,
 } from "@chakra-ui/slider";
 
-const Slider = () => {
+const Slider = ({ id, onChange, value = 30, min = 0, max = 100 }) => {
+  const handleChange = (value) => {
+    onChange(id, value);
+  };
   return (
-    <ChakraSlider defaultValue={30} h={"34px"}>
+    <ChakraSlider
+      defaultValue={value}
+      h={"34px"}
+      onChange={handleChange}
+      min={min}
+      max={max}
+    >
       <SliderTrack h={"16px"} borderRadius={"8px"} background={"var(--black)"}>
         <SliderFilledTrack background={"var(--white)"} />
       </SliderTrack>

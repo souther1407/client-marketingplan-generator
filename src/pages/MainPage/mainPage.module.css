@@ -3,8 +3,10 @@
   height: 100vh;
   background: var(--background);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 
 .container {
@@ -12,19 +14,28 @@
   border-radius: 8px;
   width: 600px;
 }
-.container main {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+.container {
+  main {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--white);
+    color: var(--black);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
 }
 
-.container footer {
-  display: flex;
-  justify-content: flex-end;
-  background: var(--white);
-  color: var(--black);
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
+.budgetSlider {
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
 }
