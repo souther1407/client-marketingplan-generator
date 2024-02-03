@@ -71,4 +71,10 @@
 .resultMarkdown {
   line-height: 1.7;
   font-size: 0.77rem;
+  strong {
+    color: var(--white);
+  }
+  p {
+    color: var(--gray);
+  }
 }
