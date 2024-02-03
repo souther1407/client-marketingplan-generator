@@ -4,9 +4,22 @@
   background: var(--background);
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+.nav {
+  background-color: var(--primary);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
 }
 
 .container {

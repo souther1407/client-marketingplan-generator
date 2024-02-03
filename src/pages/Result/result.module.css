@@ -1,0 +1,74 @@
+.result {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+
+    .resultDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 64px 0;
+      padding: 16px;
+      width: 80%;
+      border-top: 1px solid var(--primary);
+      border-bottom: 1px solid var(--primary);
+    }
+    .growthBussines {
+      padding: 16px;
+      width: 600px;
+    }
+  }
+}
+.semicircle {
+  --ancho: 175px;
+  --alto: calc(var(--ancho) / 2);
+  --elipse: 14px;
+  width: var(--ancho);
+  height: calc(var(--alto) - var(--elipse));
+  background-color: var(--primary-light);
+  border-bottom-left-radius: var(--alto) calc(var(--alto) - var(--elipse));
+  border-bottom-right-radius: var(--alto) calc(var(--alto) - var(--elipse));
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 0 0 24px 24px;
+  .setup {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+
+    .tutorials {
+      display: flex;
+      gap: 48px;
+      .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        img {
+          width: 240px;
+        }
+      }
+    }
+  }
+}
+
+.resultMarkdown {
+  line-height: 1.7;
+  font-size: 0.77rem;
+}

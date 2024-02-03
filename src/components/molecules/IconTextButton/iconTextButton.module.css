@@ -32,7 +32,7 @@
 
 /* Secondary */
 .secondary.iconTextButton.full {
-  background-color: gainsboro;
+  background-color: var(--light-blue);
   color: white;
 }
 

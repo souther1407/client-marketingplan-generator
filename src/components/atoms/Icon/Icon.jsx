@@ -65,7 +65,11 @@ import {
 import { CgArrowsV } from "react-icons/cg";
 import { FiClock } from "react-icons/fi";
 import styles from "./icon.module.css";
-
+import FacebookAds from "@assets/appsicons/Facebook Ads.svg";
+import GoogleBusinessProfile from "@assets/appsicons/Google Business Profile.svg";
+import GoogleSearch from "@assets/appsicons/Google Search.svg";
+import InstagramAds from "@assets/appsicons/Instagram Ads.svg";
+import LinkedinB2B from "@assets/appsicons/Linkedin B2B.svg";
 const Icon = ({ type, size, color = "inherit" }) => {
   const props = {
     size: size || "100%",
@@ -127,6 +131,21 @@ const Icon = ({ type, size, color = "inherit" }) => {
     youtube: <AiFillYoutube {...props} />,
     linkedin: <AiFillLinkedin {...props} />,
     clip: <AiOutlinePaperClip {...props} />,
+    "Facebook Ads": (
+      <img src={FacebookAds} style={{ width: size, height: size }} />
+    ),
+    "Google Business Profile": (
+      <img src={GoogleBusinessProfile} style={{ width: size, height: size }} />
+    ),
+    "Instagram Ads": (
+      <img src={InstagramAds} style={{ width: size, height: size }} />
+    ),
+    "Google Search Ads": (
+      <img src={GoogleSearch} style={{ width: size, height: size }} />
+    ),
+    "B2B Lead Generation": (
+      <img src={LinkedinB2B} style={{ width: size, height: size }} />
+    ),
   };
   return <i>{icons[type]}</i>;
 };
