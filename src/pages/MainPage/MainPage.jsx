@@ -31,6 +31,9 @@ const MainPage = () => {
       {creatingPlan && <LoadingScreen />}
       <nav className={styles.nav}>
         <Text>Paddawan</Text>
+        <div className={styles.label}>
+          <Text bold>Beta 0.0.5</Text>
+        </div>
       </nav>
       <div className={styles.mainContent}>
         <div className={styles.container}>
