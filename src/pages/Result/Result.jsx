@@ -5,6 +5,7 @@ import Link from "../../components/atoms/Link/Link";
 import Text from "@/components/atoms/Text/Text";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Markdown from "react-markdown";
+import Mark from "../../components/atoms/Mark/Mark";
 import { usePlansStore } from "../../stores/usePlanStore";
 const Result = () => {
   const plan = usePlansStore((state) => state.plan);
@@ -15,27 +16,36 @@ const Result = () => {
           <Icon size={"2.5rem"} type={plan?.strategy ?? ""} />
         </div>
         <section className={styles.setup}>
-          <Text bold type="title">
-            Optimal Marketing Plan:&nbsp; {plan?.product ?? "not found"}
+          <Text
+            bold
+            type="title"
+            textAlign="center"
+            size="1.7rem"
+            fontFamily="inter"
+          >
+            Optimal Marketing Plan:&nbsp;{" "}
+            <Mark>{plan?.product ?? "not found"}</Mark>
           </Text>
-          <Text bold>Set-Up Requirements</Text>
+          <Text bold fontFamily="inter">
+            Set-Up Requirements
+          </Text>
           <div className={styles.tutorials}>
             <Link to={"#"}>
               <div className={styles.link}>
                 <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text>Create a Facebook Page</Text>
+                <Text fontFamily="inter">Create a Facebook Page</Text>
               </div>
             </Link>
             <Link to={"#"}>
               <div className={styles.link}>
                 <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text>Meta Ads Manage</Text>
+                <Text fontFamily="inter">Meta Ads Manage</Text>
               </div>
             </Link>
             <Link to={"#"}>
               <div className={styles.link}>
                 <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text>Google Profile</Text>
+                <Text fontFamily="inter">Google Profile</Text>
               </div>
             </Link>
           </div>
@@ -49,7 +59,9 @@ const Result = () => {
           </Markdown>
         </section>
         <section className={styles.growthBussines}>
-          <IconTextButton size="100%">Grown your Business</IconTextButton>
+          <IconTextButton size="100%" colorVariant="secondary">
+            Scale your Business
+          </IconTextButton>
         </section>
       </main>
     </div>

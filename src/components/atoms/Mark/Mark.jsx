@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./mark.module.css";
-const Mark = ({ children }) => {
-  return <strong className={styles.mark}>{children}</strong>;
+const Mark = ({ children, color = "soft" }) => {
+  return (
+    <strong className={`${styles.mark} ${styles[color]}`}>{children}</strong>
+  );
 };
 
 export default Mark;

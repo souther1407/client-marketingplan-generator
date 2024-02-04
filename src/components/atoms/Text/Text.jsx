@@ -8,13 +8,14 @@ const Text = ({
   children,
   size,
   textAlign = "start",
+  fontFamily = "inherit",
   ...otherProps
 }) => {
   if (type === "title") {
     return (
       <h1
         className={`${styles.title} ${styles[color]} ${bold && styles.bold}`}
-        style={{ textAlign, fontSize: size ?? "" }}
+        style={{ textAlign, fontSize: size ?? "", fontFamily }}
         {...otherProps}
       >
         {children}
@@ -22,19 +23,19 @@ const Text = ({
     );
   } else if (type === "subtitle") {
     return (
-      <p
+      <h3
         className={`${styles.subtitle} ${styles[color]} ${bold && styles.bold}`}
-        style={{ textAlign, fontSize: size ?? "" }}
+        style={{ textAlign, fontSize: size ?? "", fontFamily }}
         {...otherProps}
       >
         {children}
-      </p>
+      </h3>
     );
   }
   return (
     <p
       className={`${styles.text} ${styles[color]} ${bold && styles.bold}`}
-      style={{ textAlign, fontSize: size ?? "" }}
+      style={{ textAlign, fontSize: size ?? "", fontFamily }}
       {...otherProps}
     >
       {children}

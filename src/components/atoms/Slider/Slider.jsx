@@ -19,10 +19,18 @@ const Slider = ({ id, onChange, value = 30, min = 0, max = 100, step = 1 }) => {
       max={max}
       step={step}
     >
-      <SliderTrack h={"16px"} borderRadius={"8px"} background={"var(--black)"}>
-        <SliderFilledTrack background={"var(--white)"} />
+      <SliderTrack
+        h={"16px"}
+        borderRadius={"8px"}
+        background={"var(--background)"}
+      >
+        <SliderFilledTrack background={"var(--primary-light)"} />
       </SliderTrack>
-      <SliderThumb />
+      <SliderThumb
+        bg={"var(--background)"}
+        border={"6px solid var(--primary-light)"}
+        p={"12px"}
+      />
     </ChakraSlider>
   );
 };

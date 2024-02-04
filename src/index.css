@@ -25,6 +25,23 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: inter;
+  src: url(assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(assets/fonts/Inter-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: inter;
+  src: url(assets/fonts/Inter-ExtraBold.ttf);
+  font-weight: 800;
+}
+
 html,
 body {
   font-size: 18px;
@@ -42,15 +59,15 @@ img {
   --black-transparent: #1e22265e;
   --light-blue: #749bc2;
   --light-gray: rgba(159, 159, 159, 0.26);
-  --gray: gray;
+  --gray: #8f8f8f;
   --light-blue-transparent: #ccd6dd;
   --blue: #4682a9;
   --green: rgb(77, 219, 77);
   --light-green: rgb(122, 243, 122);
   --dark-green: #1e2226;
-  --primary: var(--dark-green);
-  --primary-light: #2e343a;
-  --background: #0d0d0d;
+  --primary: #1c243c;
+  --primary-light: #2a3853;
+  --background: #161f32;
   --background-container: var(--white-transparent);
   --container-border: var(--light-gray);
 }

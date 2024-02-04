@@ -25,25 +25,11 @@
 .container {
   background-color: var(--primary);
   border-radius: 8px;
-  width: 600px;
-}
-
-.container {
-  main {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  footer {
-    display: flex;
-    justify-content: flex-end;
-    background: var(--white);
-    color: var(--black);
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
 }
 
 .budgetSlider {

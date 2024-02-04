@@ -70,6 +70,7 @@
 
 .resultMarkdown {
   line-height: 1.7;
+  font-family: "inter";
   font-size: 0.77rem;
   strong {
     color: var(--white);

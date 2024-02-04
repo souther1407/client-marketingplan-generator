@@ -1,3 +1,7 @@
 .mark {
   color: var(--blue);
 }
+
+.mark.soft {
+  color: var(--gray);
+}

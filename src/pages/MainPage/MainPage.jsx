@@ -34,42 +34,37 @@ const MainPage = () => {
       </nav>
       <div className={styles.mainContent}>
         <div className={styles.container}>
-          <main>
-            <div>
-              <Text textAlign="center">
-                Please describe your product/service in 1- 2 sentences MAX.
-              </Text>
-              <Text textAlign="center" size={"0.78rem"} color="soft">
-                Ex: Vegan Protein Bar
-              </Text>
-            </div>
-            <Input
-              id={"msg"}
+          <div>
+            <Text textAlign="center">
+              Please describe your product/service in 1- 2 sentences MAX.
+            </Text>
+            <Text textAlign="center" size={"0.78rem"} color="soft">
+              Ex: Vegan Protein Bar
+            </Text>
+          </div>
+          <Input
+            id={"msg"}
+            onChange={handleChange}
+            onError={() => {}}
+            placeholder="Type your product/service here."
+          />
+          <div className={styles.budgetSlider}>
+            <section>
+              <Text>Budget</Text>
+              <Text>${input.budget}</Text>
+            </section>
+            <Slider
+              id="budget"
               onChange={handleChange}
-              onError={() => {}}
-              placeholder="Type your product/service here."
+              value={input.budget}
+              min={10}
+              max={10000}
+              step={10}
             />
-            <div className={styles.budgetSlider}>
-              <section>
-                <Text>Budget</Text>
-                <Text>${input.budget}</Text>
-              </section>
-              <Slider
-                id="budget"
-                onChange={handleChange}
-                value={input.budget}
-                min={10}
-                max={10000}
-                step={10}
-              />
-            </div>
-            <IconTextButton
-              colorVariant="secondary"
-              onClick={handleGeneratePlan}
-            >
-              {"Create Marketing Plan -->"}
-            </IconTextButton>
-          </main>
+          </div>
+          <IconTextButton colorVariant="secondary" onClick={handleGeneratePlan}>
+            {"Create Marketing Plan -->"}
+          </IconTextButton>
         </div>
       </div>
     </div>
