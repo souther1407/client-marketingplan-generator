@@ -1,3 +1,15 @@
+@keyframes barEffect {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .result {
   width: 100%;
   min-height: 100vh;
@@ -40,9 +52,15 @@
   align-items: self-start;
 }
 .topNav {
+  position: fixed;
   display: flex;
   justify-content: flex-end;
   padding: 8px;
+  width: 100%;
+  background-color: var(--background);
+  animation-name: barEffect;
+  animation-duration: 1ms;
+  animation-timeline: scroll();
 }
 .nav {
   display: flex;
