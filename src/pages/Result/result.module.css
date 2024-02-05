@@ -27,14 +27,14 @@
       flex-direction: column;
       gap: 16px;
       margin: 64px 0;
-      width: calc(400px + 25vw);
+      width: calc(360px + 25vw);
       padding: 16px;
       border-top: 1px solid var(--primary);
       border-bottom: 1px solid var(--primary);
     }
     .growthBussines {
       padding: 16px;
-      width: calc(400px + 25vw);
+      width: calc(360px + 25vw);
     }
   }
 }
@@ -100,5 +100,15 @@
   }
   p {
     color: var(--gray);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .result {
+    .main {
+      .resultDetail {
+        width: 100%;
+      }
+    }
   }
 }

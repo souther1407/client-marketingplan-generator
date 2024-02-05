@@ -50,3 +50,12 @@
   background-color: var(--primary-light);
   border-radius: 24px;
 }
+
+@media screen and (max-width: 600px) {
+  .mainContent {
+    padding: 16px;
+  }
+  .container {
+    width: 100%;
+  }
+}

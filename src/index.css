@@ -71,3 +71,10 @@ img {
   --background-container: var(--white-transparent);
   --container-border: var(--light-gray);
 }
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
