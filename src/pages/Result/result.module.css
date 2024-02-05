@@ -15,14 +15,14 @@
       flex-direction: column;
       gap: 16px;
       margin: 64px 0;
+      width: calc(400px + 25vw);
       padding: 16px;
-      width: 80%;
       border-top: 1px solid var(--primary);
       border-bottom: 1px solid var(--primary);
     }
     .growthBussines {
       padding: 16px;
-      width: 600px;
+      width: calc(400px + 25vw);
     }
   }
 }
@@ -39,7 +39,11 @@
   justify-content: center;
   align-items: self-start;
 }
-
+.topNav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
 .nav {
   display: flex;
   flex-direction: column;
@@ -71,7 +75,8 @@
 .resultMarkdown {
   line-height: 1.7;
   font-family: "inter";
-  font-size: 0.77rem;
+  text-wrap: wrap;
+  font-size: 1rem;
   strong {
     color: var(--white);
   }

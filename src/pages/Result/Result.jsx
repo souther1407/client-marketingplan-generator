@@ -11,6 +11,11 @@ const Result = () => {
   const plan = usePlansStore((state) => state.plan);
   return (
     <div className={styles.result}>
+      <nav className={styles.topNav}>
+        <IconTextButton colorVariant="secondary">
+          Scale your Business
+        </IconTextButton>
+      </nav>
       <nav className={styles.nav}>
         <div className={styles.semicircle}>
           <Icon size={"2.5rem"} type={plan?.strategy ?? ""} />
@@ -53,7 +58,6 @@ const Result = () => {
       </nav>
       <main>
         <section className={styles.resultDetail}>
-          <Text bold>{plan?.strategy ?? "strategy"}</Text>
           <Markdown className={styles.resultMarkdown}>
             {plan ? plan.result : "Not plan generate :c"}
           </Markdown>
