@@ -7,8 +7,11 @@ import IconTextButton from "../../components/molecules/IconTextButton/IconTextBu
 import Markdown from "react-markdown";
 import Mark from "../../components/atoms/Mark/Mark";
 import { usePlansStore } from "../../stores/usePlanStore";
+import { useNavigate } from "react-router-dom";
+import { GROW_YOUR_BUSINESS } from "../../constants/routes";
 const Result = () => {
   const plan = usePlansStore((state) => state.plan);
+  const navigate = useNavigate();
   return (
     <div className={styles.result}>
       <nav className={styles.topNav}>
@@ -63,7 +66,11 @@ const Result = () => {
           </Markdown>
         </section>
         <section className={styles.growthBussines}>
-          <IconTextButton size="100%" colorVariant="secondary">
+          <IconTextButton
+            size="100%"
+            colorVariant="secondary"
+            onClick={() => navigate(GROW_YOUR_BUSINESS)}
+          >
             Scale your Business
           </IconTextButton>
         </section>

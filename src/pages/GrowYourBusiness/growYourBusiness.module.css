@@ -8,7 +8,7 @@
 }
 .container {
   background-color: var(--primary);
-  width: 800px;
+
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,9 @@
       background-color: var(--background);
       align-items: center;
       gap: 8px;
+      width: 400px;
+      height: 180px;
+      justify-content: center;
       padding: 24px;
       .check {
         position: absolute;
