@@ -1,6 +1,14 @@
 .primary.container,
 .secondary.container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+.primary.container .label,
+.secondary.container .label {
+  font-size: 0.77rem;
 }
 .primary .icon,
 .secondary .icon {
@@ -13,20 +21,25 @@
 .secondary .icon + .input {
   padding: 8px 16px 8px 48px;
 }
+
+.primary.container:hover,
+.primary.container:has(.input:focus) {
+  outline: 1px solid var(--primary);
+  border-radius: 8px;
+}
+
 .primary .icon {
   color: var(--blue);
 }
 .primary .input {
-  border: 1px solid var(--light-gray);
-  padding: 12px 16px;
   border-radius: 8px;
   color: var(--gray);
   background-color: transparent;
-  font-size: 0.77rem;
+  font-size: 1rem;
 }
 
 .primary .input:focus {
-  outline: 1px solid var(--blue);
+  outline: none;
 }
 
 .primary .input::placeholder {

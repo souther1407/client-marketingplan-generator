@@ -6,6 +6,7 @@ const Input = ({
   onChange,
   onError,
   variant = "primary",
+  label = "",
   icon,
   size = "100%",
   validators = [],
@@ -31,6 +32,7 @@ const Input = ({
           <Icon type={icon} size={"1.4rem"} />
         </div>
       )}
+      {label && <label className={styles.label}>{label}</label>}
       <input
         style={{ width: size }}
         className={styles.input}

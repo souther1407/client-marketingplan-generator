@@ -55,7 +55,7 @@ img {
   --white: #c4c4c4;
   --white-transparent: #ffffff3b;
   --yellow-cream: #f6f4eb;
-  --black: #1e2226;
+  --black: #161f32;
   --black-transparent: #1e22265e;
   --light-blue: #749bc2;
   --light-gray: rgba(159, 159, 159, 0.26);
@@ -65,9 +65,11 @@ img {
   --green: rgb(77, 219, 77);
   --light-green: rgb(122, 243, 122);
   --dark-green: #1e2226;
-  --primary: #1c243c;
-  --primary-light: #2a3853;
+  --primary: #0ecb81;
+  --primary-dark: #0ecb8357;
   --background: #161f32;
+  --background-light: #1c243c;
+  --background-dark: rgb(21, 26, 43);
   --background-container: var(--white-transparent);
   --container-border: var(--light-gray);
 }

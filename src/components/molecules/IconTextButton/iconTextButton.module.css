@@ -4,7 +4,7 @@
   outline: none;
   border: 1px solid transparent;
   cursor: pointer;
-  padding: 4px 24px;
+  padding: 8px 24px;
   border-radius: 8px;
   background-color: transparent;
   transition: background 0.2s ease-in;
@@ -19,12 +19,16 @@
 /* Primary */
 .primary.iconTextButton.full {
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--black);
+}
+.primary.iconTextButton:disabled {
+  background-color: var(--primary-dark);
+  cursor: auto;
 }
 .primary.iconTextButton.full:hover,
 .primary.iconTextButton.bordered:hover {
-  background-color: var(--primary-darker);
-  color: var(--white);
+  background-color: var(--primary-dark);
+  color: var(--black);
 }
 .primary.iconTextButton.bordered {
   border: 1px solid var(--primary);

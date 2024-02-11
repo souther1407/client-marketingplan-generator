@@ -20,14 +20,14 @@ const Slider = ({ id, onChange, value = 30, min = 0, max = 100, step = 1 }) => {
       step={step}
     >
       <SliderTrack
-        h={"16px"}
+        h={"8px"}
         borderRadius={"8px"}
-        background={"var(--background)"}
+        background={"var(--background-dark)"}
       >
-        <SliderFilledTrack background={"var(--primary-light)"} />
+        <SliderFilledTrack background={"var(--primary)"} />
       </SliderTrack>
       <SliderThumb
-        bg={"var(--background)"}
+        bg={"var(--primary)"}
         border={"6px solid var(--primary-light)"}
         p={"12px"}
       />
