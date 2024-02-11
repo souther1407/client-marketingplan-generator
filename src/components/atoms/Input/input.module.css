@@ -44,7 +44,7 @@
 
 .primary .input::placeholder {
   color: var(--gray);
-  font-size: 0.77rem;
+  font-size: 1rem;
 }
 
 .secondary .input {

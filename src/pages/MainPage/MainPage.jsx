@@ -39,7 +39,9 @@ const MainPage = () => {
     <div className={styles.mainPage}>
       {creatingPlan && <LoadingScreen />}
       <nav className={styles.nav}>
-        <Text>Paddawan</Text>
+        <Text bold color="primary">
+          Paddawan
+        </Text>
         <div className={styles.label}>
           <Text bold>Beta 0.0.5</Text>
         </div>
