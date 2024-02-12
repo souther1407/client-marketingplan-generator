@@ -75,7 +75,17 @@ const MainPage = () => {
             <section>
               <Text>Budget</Text>
               <Text>
-                <Mark color="primary">${input.budget}</Mark>
+                <Mark color="primary">
+                  $
+                  <input
+                    onChange={(e) =>
+                      handleChange("budget", parseInt(e.target.value))
+                    }
+                    className={styles.budgetInput}
+                    type="number"
+                    value={input.budget}
+                  />
+                </Mark>
               </Text>
             </section>
             <Slider

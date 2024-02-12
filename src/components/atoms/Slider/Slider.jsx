@@ -14,10 +14,11 @@ const Slider = ({ id, onChange, value = 30, min = 0, max = 100, step = 1 }) => {
     <ChakraSlider
       defaultValue={value}
       h={"34px"}
+      value={value}
       onChange={handleChange}
       min={min}
+      focusThumbOnChange={false}
       max={max}
-      step={step}
     >
       <SliderTrack
         h={"8px"}
