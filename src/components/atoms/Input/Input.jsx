@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./input.module.css";
+import Text from "../Text/Text";
 import Icon from "../Icon/Icon";
 const Input = ({
   id,
@@ -32,7 +33,7 @@ const Input = ({
           <Icon type={icon} size={"1.4rem"} />
         </div>
       )}
-      {label && <label className={styles.label}>{label}</label>}
+      {label && <Text className={styles.label}>{label}</Text>}
       <input
         style={{ width: size }}
         className={styles.input}
