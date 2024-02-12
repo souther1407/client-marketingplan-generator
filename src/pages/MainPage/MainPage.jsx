@@ -22,10 +22,11 @@ const MainPage = () => {
   const { creatingPlan, createPlan } = usePlansStore((state) => state);
 
   const handleChange = (id, value) => {
-    if (value.length == MAX_CHARS + 1) {
+    if (id === "msg" && value.length == MAX_CHARS + 1) {
       return;
+    } else if (id === "msg" && value.length < MAX_CHARS + 1) {
+      setMaxChars(value.length);
     }
-    setMaxChars(value.length);
     setInput((prev) => ({ ...prev, [id]: value }));
   };
 

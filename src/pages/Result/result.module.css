@@ -1,15 +1,3 @@
-@keyframes barEffect {
-  0% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .result {
   width: 100%;
   min-height: 100vh;
@@ -29,8 +17,6 @@
       margin: 64px 0;
       width: calc(360px + 25vw);
       padding: 16px;
-      border-top: 1px solid var(--primary);
-      border-bottom: 1px solid var(--primary);
     }
     .growthBussines {
       padding: 16px;
@@ -38,58 +24,58 @@
     }
   }
 }
-.semicircle {
-  --ancho: 175px;
-  --alto: calc(var(--ancho) / 2);
-  --elipse: 14px;
-  width: var(--ancho);
-  height: calc(var(--alto) - var(--elipse));
-  background-color: var(--primary-light);
-  border-bottom-left-radius: var(--alto) calc(var(--alto) - var(--elipse));
-  border-bottom-right-radius: var(--alto) calc(var(--alto) - var(--elipse));
-  display: flex;
-  justify-content: center;
-  align-items: self-start;
-}
+
 .topNav {
-  position: fixed;
   display: flex;
-  justify-content: flex-end;
-  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
   width: 100%;
   background-color: var(--background);
-  animation-name: barEffect;
-  animation-duration: 1ms;
-  animation-timeline: scroll();
 }
 .nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary);
-  border-radius: 0 0 24px 24px;
-  .setup {
+  background-color: var(--background-light);
+  border-radius: 0 0 50px 50px;
+  padding: 32px;
+  border: 1px solid var(--light-gray);
+  .strategy {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-dark);
+    padding: 8px;
+    border-radius: 8px;
 
-    .tutorials {
-      display: flex;
-      gap: 48px;
-      .link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        img {
-          width: 240px;
-        }
-      }
-    }
+    gap: 16px;
+  }
+  .strategy > p {
+    color: var(--primary);
   }
 }
 
+.extraResources {
+  display: flex;
+  flex-direction: column;
+  width: calc(360px + 23vw);
+  gap: 16px;
+  .videos {
+    display: flex;
+    gap: 64px;
+    .video {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video img {
+      width: 300px;
+      height: 180px;
+    }
+  }
+}
 .resultMarkdown {
   line-height: 1.7;
   font-family: "inter";
@@ -101,13 +87,37 @@
   p {
     color: var(--gray);
   }
+  h1,
+  h2 {
+    font-weight: 700;
+    color: var(--white);
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .result {
     .main {
       .resultDetail {
         width: 100%;
+      }
+    }
+    .nav {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid var(--light-gray);
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .extraResources {
+      .videos {
+        flex-direction: column;
+        .video {
+          gap: 16px;
+        }
+        .video img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

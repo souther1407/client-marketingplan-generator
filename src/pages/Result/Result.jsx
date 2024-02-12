@@ -15,49 +15,27 @@ const Result = () => {
   return (
     <div className={styles.result}>
       <nav className={styles.topNav}>
-        <IconTextButton colorVariant="secondary">
-          Scale your Business
-        </IconTextButton>
+        <div>
+          <Text bold color="soft">
+            Paddawan
+          </Text>
+        </div>
+        <IconTextButton>Scale your Business</IconTextButton>
       </nav>
       <nav className={styles.nav}>
-        <div className={styles.semicircle}>
-          <Icon size={"2.5rem"} type={plan?.strategy ?? ""} />
+        <Text
+          bold
+          type="title"
+          textAlign="center"
+          size="1.7rem"
+          fontFamily="inter"
+        >
+          {plan?.product ?? "not found"}
+        </Text>
+        <div className={styles.strategy}>
+          <Text>Facebook Ads</Text>
+          <Icon type={"Facebook Ads"} size={"1rem"} />
         </div>
-        <section className={styles.setup}>
-          <Text
-            bold
-            type="title"
-            textAlign="center"
-            size="1.7rem"
-            fontFamily="inter"
-          >
-            Optimal Marketing Plan:&nbsp;{" "}
-            <Mark>{plan?.product ?? "not found"}</Mark>
-          </Text>
-          <Text bold fontFamily="inter">
-            Set-Up Requirements
-          </Text>
-          <div className={styles.tutorials}>
-            <Link to={"#"}>
-              <div className={styles.link}>
-                <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text fontFamily="inter">Create a Facebook Page</Text>
-              </div>
-            </Link>
-            <Link to={"#"}>
-              <div className={styles.link}>
-                <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text fontFamily="inter">Meta Ads Manage</Text>
-              </div>
-            </Link>
-            <Link to={"#"}>
-              <div className={styles.link}>
-                <img src="https://s3-alpha.figma.com/hub/file/1271832110/cdcd2381-7724-4076-8bd6-97dbc4e30ac7-cover.png" />
-                <Text fontFamily="inter">Google Profile</Text>
-              </div>
-            </Link>
-          </div>
-        </section>
       </nav>
       <main>
         <section className={styles.resultDetail}>
@@ -66,13 +44,22 @@ const Result = () => {
           </Markdown>
         </section>
         <section className={styles.growthBussines}>
-          <IconTextButton
-            size="100%"
-            colorVariant="secondary"
-            onClick={() => navigate(GROW_YOUR_BUSINESS)}
-          >
+          <IconTextButton size="100%" onClick={() => {}}>
             Scale your Business
           </IconTextButton>
+        </section>
+        <section className={styles.extraResources}>
+          <Text>Extra resources</Text>
+          <div className={styles.videos}>
+            <div className={styles.video}>
+              <img src="https://i.blogs.es/b44509/youtubealt/1366_2000.jpg" />
+              <Text>Meta Ads Setup</Text>
+            </div>
+            <div className={styles.video}>
+              <img src="https://i.blogs.es/b44509/youtubealt/1366_2000.jpg" />
+              <Text>Facebook Ads Full-Guide</Text>
+            </div>
+          </div>
         </section>
       </main>
     </div>
