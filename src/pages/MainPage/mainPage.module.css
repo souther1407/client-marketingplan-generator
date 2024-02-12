@@ -67,7 +67,7 @@
 
 .budgetInput {
   background-color: transparent;
-  width: 40px;
+  width: 64px;
 }
 .budgetInput:focus {
   outline: none;
