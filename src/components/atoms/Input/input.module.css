@@ -21,11 +21,13 @@
 .secondary .icon + .input {
   padding: 8px 16px 8px 48px;
 }
-
+.primary.container {
+  outline: 1px solid var(--light-gray);
+  border-radius: 8px;
+}
 .primary.container:hover,
 .primary.container:has(.input:focus) {
   outline: 1px solid var(--primary);
-  border-radius: 8px;
 }
 
 .primary .icon {

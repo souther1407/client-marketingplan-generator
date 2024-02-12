@@ -74,14 +74,16 @@ const MainPage = () => {
           <div className={styles.budgetSlider}>
             <section>
               <Text>Budget</Text>
-              <Text>${input.budget}</Text>
+              <Text>
+                <Mark color="primary">${input.budget}</Mark>
+              </Text>
             </section>
             <Slider
               id="budget"
               onChange={handleChange}
               value={input.budget}
               min={10}
-              max={10000}
+              max={50000}
               step={10}
             />
           </div>
