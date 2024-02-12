@@ -33,7 +33,7 @@ const Input = ({
           <Icon type={icon} size={"1.4rem"} />
         </div>
       )}
-      {label && <Text className={styles.label}>{label}</Text>}
+      {label && <Text bold>{label}</Text>}
       <input
         style={{ width: size }}
         className={styles.input}
