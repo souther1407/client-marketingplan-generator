@@ -110,7 +110,8 @@ const MainPage = () => {
               onChange={handleChange}
               value={input.budget}
               min={10}
-              onError={() => {}}
+              onError={handleErrors}
+              validators={[isNumberTooBig]}
               max={50000}
               step={10}
             />
