@@ -9,14 +9,26 @@ import Mark from "../../components/atoms/Mark/Mark";
 import { usePlansStore } from "../../stores/usePlanStore";
 import { useNavigate } from "react-router-dom";
 import { GENERATE_PLAN } from "../../constants/routes";
-
-const MAX_CHARS = 25;
+import { isEmpty, isNumberTooBig } from "../../utils/validators/validators";
+const MAX_CHARS = 50;
 
 const MainPage = () => {
   const [input, setInput] = useState({
     msg: "",
-    budget: 5000,
+    budget: 0,
   });
+
+  const [errors, setErrors] = useState({
+    msg: "value",
+    budget: "",
+  });
+
+  const isThereAnyError = () => {
+    for (let e in errors) {
+      if (errors[e] !== "") return true;
+    }
+    return false;
+  };
   const [maxChars, setMaxChars] = useState(input.msg.length);
   const navigate = useNavigate();
   const { creatingPlan, createPlan } = usePlansStore((state) => state);
@@ -29,7 +41,10 @@ const MainPage = () => {
     }
     setInput((prev) => ({ ...prev, [id]: value }));
   };
-
+  const handleErrors = (id, value) => {
+    console.log(id, value);
+    setErrors((prev) => ({ ...prev, [id]: value }));
+  };
   const handleGeneratePlan = async () => {
     const error = await createPlan(input);
     if (!error) {
@@ -49,16 +64,17 @@ const MainPage = () => {
       </nav>
       <div className={styles.mainContent}>
         <div className={styles.container}>
-          <Text textAlign="center">
-            Please describe your <Mark color="primary">Product/Service</Mark> in
-            1- 2 sentences MAX.
+          <Text textAlign="center" bold>
+            Find the <Mark color="primary">Perfect Marketing Strategy</Mark> for
+            any product
           </Text>
           <div className={styles.serviceInput}>
             <Input
               id={"msg"}
               value={input.msg}
               onChange={handleChange}
-              onError={() => {}}
+              onError={handleErrors}
+              validators={[isEmpty]}
               label="Product | Service"
               placeholder="Vegan Protein Bar"
             />
@@ -74,31 +90,33 @@ const MainPage = () => {
           <div className={styles.budgetSlider}>
             <section>
               <Text>Budget</Text>
-              <Text>
+              <div className={styles.budgetContainer}>
+                <Mark color="primary">$</Mark>
                 <Mark color="primary">
-                  $
-                  <input
-                    onChange={(e) =>
-                      handleChange("budget", parseInt(e.target.value))
-                    }
-                    className={styles.budgetInput}
+                  <Input
+                    id={"budget"}
+                    onChange={(id, value) => handleChange(id, parseInt(value))}
+                    onError={handleErrors}
+                    validators={[isEmpty, isNumberTooBig]}
+                    variant="plain"
                     type="number"
                     value={input.budget}
                   />
                 </Mark>
-              </Text>
+              </div>
             </section>
             <Slider
               id="budget"
               onChange={handleChange}
               value={input.budget}
               min={10}
+              onError={() => {}}
               max={50000}
               step={10}
             />
           </div>
           <IconTextButton
-            disabled={input.msg.length === 0}
+            disabled={isThereAnyError()}
             onClick={handleGeneratePlan}
           >
             {"Create Marketing Plan -->"}

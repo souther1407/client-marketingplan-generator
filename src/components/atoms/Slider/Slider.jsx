@@ -6,9 +6,28 @@ import {
   SliderThumb,
 } from "@chakra-ui/slider";
 
-const Slider = ({ id, onChange, value = 30, min = 0, max = 100, step = 1 }) => {
+const Slider = ({
+  id,
+  onChange,
+  onError,
+  value = 30,
+  min = 0,
+  max = 100,
+  step = 1,
+  validators = [],
+}) => {
   const handleChange = (value) => {
+    handleError(value);
     onChange(id, value);
+  };
+  const handleError = (value) => {
+    let error = "";
+    for (const validator of validators) {
+      error = validator(value);
+      if (error !== "") break;
+    }
+
+    onError(id, error);
   };
   return (
     <ChakraSlider

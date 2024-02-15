@@ -21,7 +21,9 @@ const Input = ({
   const handleError = (value) => {
     let error = "";
     for (const validator of validators) {
+      console.log("itero");
       error = validator(value);
+      if (error) break;
     }
     onError(id, error);
   };
@@ -33,7 +35,7 @@ const Input = ({
           <Icon type={icon} size={"1.4rem"} />
         </div>
       )}
-      {label && <Text bold>{label}</Text>}
+      {label && <Text size={"0.77rem"}>{label}</Text>}
       <input
         style={{ width: size }}
         className={styles.input}
