@@ -98,10 +98,11 @@
     background: var(--background);
   }
   .mainContent {
-    padding: 16px;
+    padding: 4px;
   }
   .container {
     width: 100%;
     border: none;
+    padding: 8px;
   }
 }
