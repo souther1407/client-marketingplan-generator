@@ -36,6 +36,9 @@
   outline: 1px solid var(--secondary);
 }
 
+.primary.container.error {
+  outline: 1px solid var(--error) !important;
+}
 .primary .icon {
   color: var(--blue);
 }

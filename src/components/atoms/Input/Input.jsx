@@ -8,6 +8,7 @@ const Input = ({
   onError,
   variant = "primary",
   label = "",
+  errorValue = "",
   icon,
   size = "100%",
   validators = [],
@@ -29,7 +30,11 @@ const Input = ({
   };
 
   return (
-    <div className={`${styles[variant]} ${styles.container}`}>
+    <div
+      className={`${styles[variant]} ${styles.container} ${
+        errorValue ? styles.error : ""
+      }`}
+    >
       {icon && (
         <div className={styles.icon}>
           <Icon type={icon} size={"1.4rem"} />

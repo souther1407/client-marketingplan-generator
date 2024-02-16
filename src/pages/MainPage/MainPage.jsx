@@ -90,19 +90,28 @@ const MainPage = () => {
           <div className={styles.budgetSlider}>
             <section>
               <Text>Budget</Text>
-              <div className={styles.budgetContainer}>
-                <Mark color="primary">$</Mark>
-                <Mark color="primary">
-                  <Input
-                    id={"budget"}
-                    onChange={(id, value) => handleChange(id, parseInt(value))}
-                    onError={handleErrors}
-                    validators={[isEmpty, isNumberTooBig]}
-                    variant="plain"
-                    type="number"
-                    value={input.budget}
-                  />
-                </Mark>
+              <div className={styles.budgetSection}>
+                {errors.budget && <Mark color={"error"}>{errors.budget}</Mark>}
+                <div
+                  className={`${styles.budgetInput} ${
+                    errors.budget && styles.error
+                  }`}
+                >
+                  <Mark color={errors.budget ? "error" : "primary"}>$</Mark>
+                  <Mark color={errors.budget ? "error" : "primary"}>
+                    <Input
+                      id={"budget"}
+                      onChange={(id, value) =>
+                        handleChange(id, parseInt(value))
+                      }
+                      onError={handleErrors}
+                      validators={[isEmpty, isNumberTooBig]}
+                      variant="plain"
+                      type="number"
+                      value={input.budget}
+                    />
+                  </Mark>
+                </div>
               </div>
             </section>
             <Slider
@@ -120,7 +129,7 @@ const MainPage = () => {
             disabled={isThereAnyError()}
             onClick={handleGeneratePlan}
           >
-            {"Create Marketing Plan -->"}
+            {"Generate"}
           </IconTextButton>
         </div>
       </div>

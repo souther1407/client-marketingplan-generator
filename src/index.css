@@ -67,11 +67,13 @@ img {
   --dark-green: #1e2226;
   --primary: #0ecb81;
   --secondary: #1a4789;
+  --error: red;
   --primary-dark: #0ecb8334;
   --background: #161f32;
   --background-light: #1c243c;
   --background-dark: rgb(21, 26, 43);
   --background-container: var(--white-transparent);
+
   --container-border: var(--light-gray);
 }
 

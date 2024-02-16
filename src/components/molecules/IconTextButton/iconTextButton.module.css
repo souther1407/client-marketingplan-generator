@@ -4,7 +4,7 @@
   outline: none;
   border: 1px solid transparent;
   cursor: pointer;
-  padding: 4px 24px;
+  padding: 8px 24px;
   border-radius: 8px;
   background-color: transparent;
   transition: background 0.2s ease-in;
@@ -22,14 +22,20 @@
   color: var(--black);
 }
 .primary.iconTextButton:disabled {
-  background-color: var(--primary-dark);
+  background-color: #2d4356;
   cursor: auto;
+  color: var(--white);
+}
+.primary.iconTextButton:disabled:hover {
+  background-color: #2d4356 !important;
+  color: var(--white) !important;
 }
 .primary.iconTextButton.full:hover,
 .primary.iconTextButton.bordered:hover {
   background-color: var(--primary-dark);
   color: var(--black);
 }
+
 .primary.iconTextButton.bordered {
   border: 1px solid var(--primary);
   color: var(--primary);

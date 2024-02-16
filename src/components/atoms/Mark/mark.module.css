@@ -5,3 +5,7 @@
 .mark.soft {
   color: var(--gray);
 }
+
+.mark.error {
+  color: var(--error);
+}

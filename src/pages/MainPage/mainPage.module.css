@@ -64,8 +64,12 @@
 .label > * {
   color: var(--black);
 }
-
-.budgetContainer {
+.budgetSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.budgetInput {
   padding: 8px;
   background-color: var(--background-light);
   outline: 1px solid var(--light-gray);
@@ -74,16 +78,18 @@
   display: flex;
   align-items: center;
 }
-.budgetContainer:hover {
+.budgetInput.error,
+.budgetInput.error:hover,
+.budgetInput:has(.budgetInput:focus) {
+  outline: 1px solid var(--error);
+}
+.budgetInput:hover {
   outline: 1px solid var(--secondary);
 }
-.budgetContainer:has(.budgetInput:focus) {
+.budgetInput:has(.budgetInput:focus) {
   outline: 1px solid var(--secondary);
 }
-.budgetInput {
-  background-color: transparent;
-  font-weight: 700;
-}
+
 .budgetInput:focus {
   outline: none;
 }
