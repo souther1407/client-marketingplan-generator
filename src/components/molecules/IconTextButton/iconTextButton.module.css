@@ -48,6 +48,6 @@
 }
 
 .secondary.iconTextButton.bordered {
-  border: 1px solid gray;
-  color: gray;
+  border: 1px solid var(--secondary);
+  color: var(--white);
 }

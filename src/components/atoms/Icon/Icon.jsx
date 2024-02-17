@@ -50,7 +50,7 @@ import {
   AiOutlinePaperClip,
   AiFillHome,
 } from "react-icons/ai";
-import { GiGears, GiTakeMyMoney } from "react-icons/gi";
+import { GiGears, GiTakeMyMoney, GiUsaFlag } from "react-icons/gi";
 import { TfiArrowsCorner } from "react-icons/tfi";
 
 import {
@@ -64,6 +64,7 @@ import {
 } from "react-icons/bs";
 import { CgArrowsV } from "react-icons/cg";
 import { FiClock } from "react-icons/fi";
+import { TbWorld } from "react-icons/tb";
 import styles from "./icon.module.css";
 import FacebookAds from "@assets/appsicons/Facebook Ads.svg";
 import GoogleBusinessProfile from "@assets/appsicons/Google Business Profile.svg";
@@ -131,6 +132,8 @@ const Icon = ({ type, size, color = "inherit" }) => {
     youtube: <AiFillYoutube {...props} />,
     linkedin: <AiFillLinkedin {...props} />,
     clip: <AiOutlinePaperClip {...props} />,
+    usaFlag: <GiUsaFlag {...props} />,
+    world: <TbWorld {...props} />,
     "Facebook Ads": (
       <img src={FacebookAds} style={{ width: size, height: size }} />
     ),

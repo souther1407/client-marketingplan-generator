@@ -6,8 +6,9 @@
   align-items: center;
   gap: 8px;
   width: 400px;
-  height: 180px;
+  height: 200px;
   justify-content: center;
+  border-radius: 8px;
   padding: 24px;
   .check {
     position: absolute;
@@ -21,4 +22,8 @@
   .check.checked {
     background-color: var(--white);
   }
+}
+
+.option:hover {
+  outline: 1px solid var(--primary);
 }

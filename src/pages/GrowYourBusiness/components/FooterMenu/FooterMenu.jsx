@@ -4,9 +4,9 @@ import Text from "../../../../components/atoms/Text/Text";
 const FooterMenu = ({ onAnt, onNext, numPage, maxPages }) => {
   return (
     <div className={styles.footerMenu}>
-      <button>{"<---- Previous"}</button>
-      <Text color="soft">{"1 of 14"}</Text>
-      <button>{"Next ---->"}</button>
+      <button onClick={onAnt}>{"<---- Previous"}</button>
+      <Text color="soft">{`${numPage} of 14`}</Text>
+      <button onClick={onNext}>{"Next ---->"}</button>
     </div>
   );
 };

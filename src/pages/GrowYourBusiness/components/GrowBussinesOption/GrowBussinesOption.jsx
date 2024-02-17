@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./growBussinesOption.module.css";
 import FooterMenu from "../FooterMenu/FooterMenu";
-const GrowBussinesOption = ({ onOptionSelect, renderTitle, children }) => {
+const GrowBussinesOption = ({
+  renderTitle,
+  numOfPage,
+  onNext,
+  onAnt,
+  children,
+}) => {
   return (
     <div className={styles.container}>
       <main className={styles.content}>
@@ -9,7 +15,7 @@ const GrowBussinesOption = ({ onOptionSelect, renderTitle, children }) => {
         <section>{children}</section>
       </main>
       <footer className={styles.footer}>
-        <FooterMenu />
+        <FooterMenu numPage={numOfPage} onNext={onNext} onAnt={onAnt} />
       </footer>
     </div>
   );
