@@ -20,7 +20,9 @@ const Result = () => {
             Paddawan
           </Text>
         </div>
-        <IconTextButton>Scale your Business</IconTextButton>
+        <IconTextButton onClick={() => navigate(GROW_YOUR_BUSINESS)}>
+          Scale your Business
+        </IconTextButton>
       </nav>
       <nav className={styles.nav}>
         <Text
@@ -44,7 +46,10 @@ const Result = () => {
           </Markdown>
         </section>
         <section className={styles.growthBussines}>
-          <IconTextButton size="100%" onClick={() => {}}>
+          <IconTextButton
+            size="100%"
+            onClick={() => navigate(GROW_YOUR_BUSINESS)}
+          >
             Scale your Business
           </IconTextButton>
         </section>
