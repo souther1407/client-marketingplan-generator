@@ -1,0 +1,9 @@
+.footerMenu {
+  background-color: var(--primary);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  justify-content: space-between;
+  color: var(--gray-dark);
+}

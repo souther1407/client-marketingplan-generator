@@ -31,5 +31,5 @@
 }
 
 .soft {
-  color: gray;
+  color: var(--grat-dark);
 }
