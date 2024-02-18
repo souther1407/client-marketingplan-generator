@@ -7,7 +7,7 @@ const OwnerOption = ({ changeView }) => {
   return (
     <GrowBussinesOption
       numOfPage={2}
-      onAnt={() => {}}
+      onAnt={() => changeView("WhichDescribe")}
       onNext={() => {}}
       renderTitle={() => (
         <Text textAlign="center">Are you a business owner?</Text>

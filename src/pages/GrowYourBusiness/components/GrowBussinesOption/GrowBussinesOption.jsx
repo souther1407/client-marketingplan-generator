@@ -6,6 +6,7 @@ const GrowBussinesOption = ({
   numOfPage,
   onNext,
   onAnt,
+  final = false,
   children,
 }) => {
   return (
@@ -15,7 +16,12 @@ const GrowBussinesOption = ({
         <section>{children}</section>
       </main>
       <footer className={styles.footer}>
-        <FooterMenu numPage={numOfPage} onNext={onNext} onAnt={onAnt} />
+        <FooterMenu
+          numPage={numOfPage}
+          onNext={onNext}
+          onAnt={onAnt}
+          final={final}
+        />
       </footer>
     </div>
   );

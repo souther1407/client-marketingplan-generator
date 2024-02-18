@@ -23,7 +23,9 @@
     background-color: var(--white);
   }
 }
-
+.option.marked {
+  outline: 1px solid var(--primary);
+}
 .option:hover {
   outline: 1px solid var(--primary);
 }

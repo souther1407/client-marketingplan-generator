@@ -12,7 +12,6 @@ const RadioButton = ({ id, name, onChange, label = "", ...otherProps }) => {
           type="radio"
           name={name}
           id={id}
-          defaultChecked={false}
           onChange={handleCheck}
           className={styles.radioInput}
           {...otherProps}
