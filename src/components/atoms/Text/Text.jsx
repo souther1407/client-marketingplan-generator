@@ -3,19 +3,19 @@ import styles from "./text.module.css";
 
 const Text = ({
   type = "text",
-  bold,
   color = "standard",
   children,
   size,
   textAlign = "start",
   fontFamily = "inherit",
+  fontWeight = "400",
   ...otherProps
 }) => {
   if (type === "title") {
     return (
       <h1
-        className={`${styles.title} ${styles[color]} ${bold && styles.bold}`}
-        style={{ textAlign, fontSize: size ?? "", fontFamily }}
+        className={`${styles.title} ${styles[color]}`}
+        style={{ textAlign, fontSize: size ?? "", fontFamily, fontWeight }}
         {...otherProps}
       >
         {children}
@@ -24,8 +24,8 @@ const Text = ({
   } else if (type === "subtitle") {
     return (
       <h3
-        className={`${styles.subtitle} ${styles[color]} ${bold && styles.bold}`}
-        style={{ textAlign, fontSize: size ?? "", fontFamily }}
+        className={`${styles.subtitle} ${styles[color]} `}
+        style={{ textAlign, fontSize: size ?? "", fontFamily, fontWeight }}
         {...otherProps}
       >
         {children}
@@ -34,8 +34,8 @@ const Text = ({
   }
   return (
     <p
-      className={`${styles.text} ${styles[color]} ${bold && styles.bold}`}
-      style={{ textAlign, fontSize: size ?? "", fontFamily }}
+      className={`${styles.text} ${styles[color]} `}
+      style={{ textAlign, fontSize: size ?? "", fontFamily, fontWeight }}
       {...otherProps}
     >
       {children}

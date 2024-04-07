@@ -1,0 +1,49 @@
+.selectProduct {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.productInput {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.input {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.input > :first-child {
+  flex-grow: 1;
+}
+.input > :last-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+}
+.productInput > :last-child {
+  position: relative;
+  left: 24px;
+}
+.icons {
+  display: flex;
+  position: relative;
+  right: 24px;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

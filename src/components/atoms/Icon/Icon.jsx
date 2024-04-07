@@ -71,6 +71,12 @@ import GoogleBusinessProfile from "@assets/appsicons/Google Business Profile.svg
 import GoogleSearch from "@assets/appsicons/Google Search.svg";
 import InstagramAds from "@assets/appsicons/Instagram Ads.svg";
 import LinkedinB2B from "@assets/appsicons/Linkedin B2B.svg";
+import MakeupIcon from "@assets/icons/Makeup.svg";
+import SunscreenIcon from "@assets/icons/Sunscreen.svg";
+import MoisturizerIcon from "@assets/icons/Moisturizer.svg";
+import LipstickIcon from "@assets/icons/Lipstick.svg";
+import FraganceIcon from "@assets/icons/Fragance.svg";
+
 const Icon = ({ type, size, color = "inherit" }) => {
   const props = {
     size: size || "100%",
@@ -149,6 +155,15 @@ const Icon = ({ type, size, color = "inherit" }) => {
     "B2B Lead Generation": (
       <img src={LinkedinB2B} style={{ width: size, height: size }} />
     ),
+    makeup: <img src={MakeupIcon} style={{ width: size, height: size }} />,
+    sunscreen: (
+      <img src={SunscreenIcon} style={{ width: size, height: size }} />
+    ),
+    moisturizer: (
+      <img src={MoisturizerIcon} style={{ width: size, height: size }} />
+    ),
+    lipstick: <img src={LipstickIcon} style={{ width: size, height: size }} />,
+    fragance: <img src={FraganceIcon} style={{ width: size, height: size }} />,
   };
   return <i>{icons[type]}</i>;
 };

@@ -16,7 +16,7 @@
   font-size: calc(2rem - 12px);
 }
 .standard {
-  color: var(--white);
+  color: var(--black);
 }
 .inherit {
   color: inherit;

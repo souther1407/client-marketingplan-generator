@@ -58,11 +58,17 @@
   font-size: 1rem;
 }
 
+.secondary.container {
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 16px 24px;
+  gap: 4px;
+}
+
 .secondary .input {
-  border: 1px solid transparent;
-  padding: 20px 16px;
-  border-radius: 8px;
-  background-color: gainsboro;
+  background-color: var(--white);
+  color: var(--black);
   font-size: 1rem;
 }
 .secondary .input:focus {
@@ -73,7 +79,7 @@
 }
 .secondary .input::placeholder {
   color: gray;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .plain.container {
