@@ -12,6 +12,12 @@
   flex-direction: column;
   gap: 32px;
 }
+
+.productInput,
+.examples {
+  width: 850px;
+  align-self: center;
+}
 .productInput {
   display: flex;
   gap: 16px;
