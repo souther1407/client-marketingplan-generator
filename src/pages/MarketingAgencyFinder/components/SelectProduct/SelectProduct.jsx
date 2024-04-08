@@ -5,7 +5,7 @@ import Mark from "../../../../components/atoms/Mark/Mark";
 import Icon from "../../../../components/atoms/Icon/Icon";
 import Input from "../../../../components/atoms/Input/Input";
 import IconButton from "../../../../components/molecules/IconButton/IconButton";
-const SelectProduct = () => {
+const SelectProduct = ({ onNextScreen }) => {
   return (
     <div className={styles.selectProduct}>
       <main className={styles.main}>
@@ -27,7 +27,11 @@ const SelectProduct = () => {
               label="Product Description"
               placeholder="Ex: Makeup"
             />
-            <IconButton size="2rem" icon="singleArrowRight" />
+            <IconButton
+              size="2rem"
+              icon="singleArrowRight"
+              onClick={onNextScreen}
+            />
           </div>
 
           <Text color="primary">Please enter a valid product description.</Text>

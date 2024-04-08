@@ -10,7 +10,7 @@
 .radio {
   position: relative;
   display: flex;
-  outline: 1px solid var(--white);
+  outline: 2px solid var(--primary);
   width: var(--radio-w);
   height: var(--radio-h);
   display: flex;
@@ -34,13 +34,15 @@
 }
 
 .checked {
-  background-color: var(--white);
-  width: calc(var(--radio-w) - 8px);
-  height: calc(var(--radio-h) - 8px);
+  background-color: var(--primary);
+  width: calc(var(--radio-w) - 6px);
+  height: calc(var(--radio-h) - 6px);
   border-radius: 50%;
   display: none;
 }
 
 .label {
-  font-size: 0.77rem;
+  color: var(--black);
+  font-weight: 300;
+  font-size: 1rem;
 }

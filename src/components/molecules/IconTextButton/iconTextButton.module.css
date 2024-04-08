@@ -19,7 +19,7 @@
 /* Primary */
 .primary.iconTextButton.full {
   background-color: var(--primary);
-  color: var(--black);
+  color: var(--white);
 }
 .primary.iconTextButton:disabled {
   background-color: #2d4356;
@@ -32,12 +32,10 @@
 }
 .primary.iconTextButton.full:hover,
 .primary.iconTextButton.bordered:hover {
-  background-color: var(--primary-dark);
-  color: var(--black);
 }
 
 .primary.iconTextButton.bordered {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
 }
 
