@@ -52,7 +52,7 @@ import {
 } from "react-icons/ai";
 import { GiGears, GiTakeMyMoney, GiUsaFlag } from "react-icons/gi";
 import { TfiArrowsCorner } from "react-icons/tfi";
-
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import {
   BsArrowLeft,
   BsArrowRight,
@@ -137,6 +137,7 @@ const Icon = ({ type, size, color = "inherit" }) => {
     link: <AiOutlineLink {...props} />,
     youtube: <AiFillYoutube {...props} />,
     linkedin: <AiFillLinkedin {...props} />,
+    dollar: <RiMoneyDollarCircleFill {...props} />,
     clip: <AiOutlinePaperClip {...props} />,
     usaFlag: <GiUsaFlag {...props} />,
     world: <TbWorld {...props} />,

@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "./marketingAgencyFinder.module.css";
 import SelectProduct from "./components/SelectProduct/SelectProduct";
 import BussinesModel from "./components/BussinesModel/BussinesModel";
-
+import SellingPrice from "./components/SellingPrice/SellingPrice";
 const SCREENS = {
   selectProduct: {
     next: "bussinesModel",
     previous: "",
   },
   bussinesModel: {
-    next: "",
+    next: "sellingPrice",
     previous: "selectProduct",
+  },
+  sellingPrice: {
+    next: "",
+    previous: "bussinesModel",
   },
 };
 
@@ -33,6 +37,14 @@ const MarketingAgencyFinder = () => {
       {currentScreen === "bussinesModel" && (
         <div className={styles.screen}>
           <BussinesModel
+            onNextScreen={nextScreen}
+            onPreviousScreen={previousScreen}
+          />
+        </div>
+      )}
+      {currentScreen === "sellingPrice" && (
+        <div className={styles.screen}>
+          <SellingPrice
             onNextScreen={nextScreen}
             onPreviousScreen={previousScreen}
           />

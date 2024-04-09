@@ -5,7 +5,7 @@ import Mark from "../../../../components/atoms/Mark/Mark";
 import Icon from "../../../../components/atoms/Icon/Icon";
 import Input from "../../../../components/atoms/Input/Input";
 import IconButton from "../../../../components/molecules/IconButton/IconButton";
-const SelectProduct = ({ onNextScreen }) => {
+const SelectProduct = ({ onPreviousScreen, onNextScreen }) => {
   return (
     <div className={styles.selectProduct}>
       <main className={styles.main}>

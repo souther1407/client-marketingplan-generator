@@ -70,7 +70,11 @@ const BussinesModel = ({ onNextScreen, onPreviousScreen }) => {
             >
               Previous
             </IconTextButton>
-            <IconTextButton size="300px" textProps={{ fontWeight: "bold" }}>
+            <IconTextButton
+              size="300px"
+              textProps={{ fontWeight: "bold" }}
+              onClick={onNextScreen}
+            >
               Next
             </IconTextButton>
           </div>
