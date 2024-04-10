@@ -3,6 +3,7 @@ import styles from "./marketingAgencyFinder.module.css";
 import SelectProduct from "./components/SelectProduct/SelectProduct";
 import BussinesModel from "./components/BussinesModel/BussinesModel";
 import SellingPrice from "./components/SellingPrice/SellingPrice";
+import ProductCost from "./components/ProductCost/ProductCost";
 const SCREENS = {
   selectProduct: {
     next: "bussinesModel",
@@ -13,8 +14,12 @@ const SCREENS = {
     previous: "selectProduct",
   },
   sellingPrice: {
-    next: "",
+    next: "productCost",
     previous: "bussinesModel",
+  },
+  productCost: {
+    next: "",
+    previous: "sellingPrice",
   },
 };
 
@@ -45,6 +50,14 @@ const MarketingAgencyFinder = () => {
       {currentScreen === "sellingPrice" && (
         <div className={styles.screen}>
           <SellingPrice
+            onNextScreen={nextScreen}
+            onPreviousScreen={previousScreen}
+          />
+        </div>
+      )}
+      {currentScreen === "productCost" && (
+        <div className={styles.screen}>
+          <ProductCost
             onNextScreen={nextScreen}
             onPreviousScreen={previousScreen}
           />
