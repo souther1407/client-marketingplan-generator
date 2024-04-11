@@ -1,0 +1,40 @@
+.marketingBudget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 16px;
+  width: 600px;
+}
+
+.topBorder,
+.bottomBorder {
+  border: 1px solid var(--light-gray);
+  padding: 32px 24px;
+  cursor: pointer;
+}
+.topBorder {
+  border-radius: 8px 8px 0 0;
+}
+
+.bottomBorder {
+  border-radius: 0 0 8px 8px;
+}
+.button {
+  display: flex;
+  gap: 16px;
+}

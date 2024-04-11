@@ -13,6 +13,7 @@ const BussinesModel = ({ onNextScreen, onPreviousScreen }) => {
   const handleChange = (id, value) => {
     setBussinesType(value);
   };
+
   return (
     <div className={styles.bussinesModel}>
       <main className={styles.main}>

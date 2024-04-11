@@ -4,6 +4,7 @@ import SelectProduct from "./components/SelectProduct/SelectProduct";
 import BussinesModel from "./components/BussinesModel/BussinesModel";
 import SellingPrice from "./components/SellingPrice/SellingPrice";
 import ProductCost from "./components/ProductCost/ProductCost";
+import MarketingBudget from "./components/MarketingBudget/MarketingBudget";
 const SCREENS = {
   selectProduct: {
     next: "bussinesModel",
@@ -18,13 +19,17 @@ const SCREENS = {
     previous: "bussinesModel",
   },
   productCost: {
-    next: "",
+    next: "marketingBudget",
     previous: "sellingPrice",
+  },
+  marketingBudget: {
+    next: "",
+    previous: "productCost",
   },
 };
 
 const MarketingAgencyFinder = () => {
-  const [currentScreen, setCurrentScreen] = useState("selectProduct");
+  const [currentScreen, setCurrentScreen] = useState("marketingBudget");
 
   const nextScreen = () => {
     setCurrentScreen(SCREENS[currentScreen].next);
@@ -58,6 +63,14 @@ const MarketingAgencyFinder = () => {
       {currentScreen === "productCost" && (
         <div className={styles.screen}>
           <ProductCost
+            onNextScreen={nextScreen}
+            onPreviousScreen={previousScreen}
+          />
+        </div>
+      )}
+      {currentScreen === "marketingBudget" && (
+        <div className={styles.screen}>
+          <MarketingBudget
             onNextScreen={nextScreen}
             onPreviousScreen={previousScreen}
           />
