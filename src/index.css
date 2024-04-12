@@ -106,12 +106,14 @@ img {
   --gray-dark: rgb(83, 83, 83);
   --light-blue-transparent: #ccd6dd;
   --blue: #4682a9;
-  --green: rgb(77, 219, 77);
+  --green: rgb(53, 153, 53);
   --light-green: rgb(122, 243, 122);
   --dark-green: #1e2226;
-  --primary: #24625b;
+  --primary: #0a66c2;
+  --primary-light: #0a66c225;
   --secondary: #1a4789;
   --error: red;
+  --success: var(--green);
   --primary-dark: #0ecb8334;
   --background: #d2d8dd;
   --background-light: #1c243c;

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./selectProduct.module.css";
 import Text from "../../../../components/atoms/Text/Text";
 import Mark from "../../../../components/atoms/Mark/Mark";
 import Icon from "../../../../components/atoms/Icon/Icon";
 import Input from "../../../../components/atoms/Input/Input";
 import IconButton from "../../../../components/molecules/IconButton/IconButton";
-const SelectProduct = ({ onPreviousScreen, onNextScreen }) => {
+const SelectProduct = () => {
+  const [product, setProduct] = useState({
+    description: "",
+    price: "",
+  });
+
+  const handleChange = (id, value) => {
+    setProduct((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSetDesc = (desc, value) => {
+    setProduct({ description: desc, price: value });
+  };
   return (
     <div className={styles.selectProduct}>
       <main className={styles.main}>
@@ -20,54 +32,87 @@ const SelectProduct = ({ onPreviousScreen, onNextScreen }) => {
         <div className={styles.productInput}>
           <div className={styles.input}>
             <Input
-              variant="secondary"
-              onChange={(id, value) => {}}
+              variant="plain"
+              onChange={handleChange}
               onError={(id, value) => {}}
-              id={"input"}
+              id={"description"}
+              value={product.description}
               label="Product Description"
               placeholder="Ex: Makeup"
             />
-            <IconButton
-              size="2rem"
-              icon="singleArrowRight"
-              onClick={onNextScreen}
+            <div className={styles.division}></div>
+            <Input
+              variant="plain"
+              type="number"
+              onChange={handleChange}
+              value={product.price}
+              onError={(id, value) => {}}
+              id={"price"}
+              label="Selling price"
+              placeholder="Ex: 90"
             />
           </div>
 
-          <Text color="primary">Please enter a valid product description.</Text>
+          <Text>Please enter a valid product description.</Text>
         </div>
         <div className={styles.examples}>
           <Text>Examples:</Text>
           <div className={styles.icons}>
-            <div className={styles.icon}>
-              <Icon type={"makeup"} size={"8rem"} />
+            <div
+              className={styles.icon}
+              onClick={() => handleSetDesc("Makeup", "60")}
+            >
+              <Icon type={"makeup"} size={"7rem"} />
               <Text fontWeight="300" size={"0.78rem"}>
                 Makeup
               </Text>
+              <div className={styles.priceTag}>
+                <Text fontWeight="300" size={"0.78rem"} color="success">
+                  $60
+                </Text>
+              </div>
             </div>
-            <div className={styles.icon}>
-              <Icon type={"sunscreen"} size={"8rem"} />
+            <div
+              className={styles.icon}
+              onClick={() => handleSetDesc("Sunscreen", "36")}
+            >
+              <Icon type={"sunscreen"} size={"7rem"} />
               <Text fontWeight="300" size={"0.78rem"}>
                 Sunscreen
               </Text>
+              <div className={styles.priceTag}>
+                <Text fontWeight="300" size={"0.78rem"} color="success">
+                  $36
+                </Text>
+              </div>
             </div>
-            <div className={styles.icon}>
-              <Icon type={"moisturizer"} size={"8rem"} />
+            <div
+              className={styles.icon}
+              onClick={() => handleSetDesc("Moisturizer", "35")}
+            >
+              <Icon type={"moisturizer"} size={"7rem"} />
               <Text fontWeight="300" size={"0.78rem"}>
                 Moisturizer
               </Text>
+              <div className={styles.priceTag}>
+                <Text fontWeight="300" size={"0.78rem"} color="success">
+                  $35
+                </Text>
+              </div>
             </div>
-            <div className={styles.icon}>
-              <Icon type={"lipstick"} size={"8rem"} />
+            <div
+              className={styles.icon}
+              onClick={() => handleSetDesc("Lipstick", "56")}
+            >
+              <Icon type={"lipstick"} size={"7rem"} />
               <Text fontWeight="300" size={"0.78rem"}>
                 Lipstick
               </Text>
-            </div>
-            <div className={styles.icon}>
-              <Icon type={"fragance"} size={"8rem"} />
-              <Text fontWeight="300" size={"0.78rem"}>
-                Fragance
-              </Text>
+              <div className={styles.priceTag}>
+                <Text fontWeight="300" size={"0.78rem"} color="success">
+                  $56
+                </Text>
+              </div>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@
 .secondary.container {
   background-color: var(--white);
   border: 1px solid var(--gray);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 16px 24px;
   gap: 4px;
 }
@@ -84,7 +84,7 @@
 
 .plain.container {
   outline: none;
-
+  color: var(--black);
   background-color: transparent;
 }
 .plain.container:hover,
@@ -96,7 +96,6 @@
   color: inherit;
 }
 .plain .input {
-  border-radius: 8px;
   color: inherit;
   background-color: transparent;
   font-weight: inherit;

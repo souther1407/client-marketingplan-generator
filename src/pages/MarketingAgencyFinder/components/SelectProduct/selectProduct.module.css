@@ -26,21 +26,23 @@
 .input {
   position: relative;
   width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 24px;
   display: flex;
+  gap: 16px;
 }
 .input > :first-child {
   flex-grow: 1;
 }
-.input > :last-child {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2%;
+
+.division {
+  width: 2px;
+  background-color: var(--light-gray);
+  height: 100%;
 }
-.productInput > :last-child {
-  position: relative;
-  left: 24px;
-}
+
 .icons {
   display: flex;
   position: relative;
@@ -52,4 +54,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.icon > :nth-child(2) {
+  position: relative;
+  bottom: 12px;
+}
+
+.priceTag {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+}
+
+.icon:hover {
+  background-color: var(--primary-light);
+  border-radius: 12px;
 }

@@ -30,6 +30,14 @@
   color: var(--primary);
 }
 
+.success {
+  color: var(--success);
+}
+
+.error {
+  color: var(--error);
+}
+
 .soft {
   color: var(--grat-dark);
 }
