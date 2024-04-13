@@ -4,9 +4,11 @@ import Text from "../../components/atoms/Text/Text";
 import Input from "../../components/atoms/Input/Input";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Icon from "../../components/atoms/Icon/Icon";
+import LogoNav from "../../components/organisms/LogoNav";
 const Login = () => {
   return (
     <div className={styles.login}>
+      <LogoNav />
       <main className={styles.main}>
         <Text size={"2rem"}>Scale your Ecommerce Operations!</Text>
         <div className={styles.form}>
