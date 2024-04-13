@@ -20,6 +20,8 @@
 .primary.iconTextButton.full {
   background-color: var(--primary);
   color: var(--white);
+  border-radius: 32px;
+  padding: 12px 0;
 }
 .primary.iconTextButton:disabled {
   background-color: #2d4356;
@@ -37,6 +39,8 @@
 .primary.iconTextButton.bordered {
   border: 2px solid var(--primary);
   color: var(--primary);
+  border-radius: 32px;
+  padding: 12px 0;
 }
 
 /* Secondary */

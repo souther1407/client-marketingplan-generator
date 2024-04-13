@@ -1,0 +1,66 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+}
+.joinByEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bar {
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray);
+}
+
+.googleBtn {
+  border-radius: 8px;
+  padding: 12px 44px;
+  border: 1px solid var(--gray);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 8px;
+  }
+  .main > :first-child {
+    font-size: 1.6rem !important;
+  }
+  .form {
+    width: 100%;
+  }
+}

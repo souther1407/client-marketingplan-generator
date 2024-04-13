@@ -2,6 +2,7 @@
 .title {
   font-size: inherit;
   line-height: 1.7;
+  word-wrap: break-word;
 }
 
 .text {

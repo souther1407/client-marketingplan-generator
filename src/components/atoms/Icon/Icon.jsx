@@ -66,6 +66,7 @@ import { CgArrowsV } from "react-icons/cg";
 import { FiClock } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
 import styles from "./icon.module.css";
+import { FcGoogle } from "react-icons/fc";
 import FacebookAds from "@assets/appsicons/Facebook Ads.svg";
 import GoogleBusinessProfile from "@assets/appsicons/Google Business Profile.svg";
 import GoogleSearch from "@assets/appsicons/Google Search.svg";
@@ -141,6 +142,7 @@ const Icon = ({ type, size, color = "inherit" }) => {
     clip: <AiOutlinePaperClip {...props} />,
     usaFlag: <GiUsaFlag {...props} />,
     world: <TbWorld {...props} />,
+    googleIcon: <FcGoogle {...props} />,
     "Facebook Ads": (
       <img src={FacebookAds} style={{ width: size, height: size }} />
     ),
