@@ -4,9 +4,11 @@ import Logo from "../atoms/Logo/Logo";
 import IconTextButton from "../molecules/IconTextButton/IconTextButton";
 import { useNavigate, useLocation } from "react-router-dom";
 import { LOGIN } from "../../constants/routes";
+import { useLoginUser } from "../../stores/useLoginUser";
 const LogoNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const credentials = useLoginUser((state) => state.credentials);
 
   const handleClickLogin = () => {
     navigate(LOGIN);
@@ -16,7 +18,7 @@ const LogoNav = () => {
       <Logo />
       <div
         className={`${styles.loginBtn} ${
-          location.pathname === LOGIN && styles.hide
+          (location.pathname === LOGIN || credentials) && styles.hide
         }`}
       >
         <IconTextButton
